@@ -5,3 +5,10 @@
   font-weight: 500;
   font-style: normal;
 }
+:root {
+  --primary-color:  #7df37d;
+  --secondary-color:  #20c0ff;
+  --background-color: #0a0a0a;
+  --text-color: #cccccc;
+  --font-main: "Poppins", sans-serif;
+}
