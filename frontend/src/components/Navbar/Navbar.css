@@ -1,0 +1,207 @@
+/* ========== BASE NAVBAR STYLES ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gg-logo{
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.navbar-left h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+}
+/* .navbar-left h3 span {
+  display: inline-block;
+} */
+
+/* CENTER */
+.navbar-center {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 35px;
+}
+
+.nav-main li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-main li:hover {
+  color: rgb(125, 233, 125);
+}
+
+/* RIGHT SECTION */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(125, 233, 125);
+  transition: color 0.3s ease;
+}
+
+.contact-info:hover {
+  color: rgb(19, 197, 232);
+  cursor: pointer;
+}
+
+.right-nav-btn {
+  background-color: rgb(125, 233, 125);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.right-nav-btn:hover {
+  background-color: rgb(19, 197, 232);
+}
+.main-logo1{
+  color: #7df37d;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-logo2{
+  color: #20c0ff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ========== mob-ham ========== */
+.mob-ham {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mob-ham svg {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate animation when active */
+.navbar-center.active ~ .mob-ham svg {
+  transform: rotate(90deg);
+}
+
+/* ========== TABLET VIEW (769px – 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  /* Hide phone number and button, show only icon */
+  .right-nav-mob {
+    display: none;
+  }
+
+  .right-nav-btn {
+    display: none;
+  }
+
+  .contact-info {
+    color: rgb(125, 233, 125);
+    cursor: pointer;
+  }
+
+  /* Keep mob-ham hidden on tablet */
+  .mob-ham {
+    display: none;
+  }
+
+  /* Keep nav links centered */
+  .navbar-center {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* ========== MOBILE VIEW (≤768px) ========== */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  /* Show hamburger */
+  .mob-ham {
+    display: block;
+  }
+
+  /* Hide right section completely */
+  .navbar-right {
+    display: none;
+  }
+
+  /* Hide links by default (slide animation setup) */
+  .navbar-center {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Slide down when active */
+  .navbar-center.active {
+    max-height: 250px;
+    opacity: 1;
+    padding: 20px 0;
+  }
+
+  /* Stack nav items vertically */
+  .nav-main {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-main li {
+    font-size: 1.1rem;
+  }
+
+  .navbar-left h3 {
+    font-size: 1.3rem;
+  }
+}
