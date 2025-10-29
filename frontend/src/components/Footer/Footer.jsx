@@ -12,7 +12,7 @@ const Footer = () => {
         {/* ---------- Company Info ---------- */}
         <div className="footer-col">
           <h2 className="footer-logo">
-            <span className="logo-main">THE</span> GROWTH GARAGE
+            <span className="logo-main">THE</span> <span className="growth"> GROWTH</span><span className="garage">GARAGE</span>
           </h2>
           <p className="footer-desc">
             Helping businesses accelerate their growth through creative design,

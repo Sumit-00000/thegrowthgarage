@@ -21,7 +21,7 @@
 }
 
 .logo-main {
-  color: #ff3131;
+  color: white;
 }
 
 .footer-desc {
@@ -29,6 +29,17 @@
   color: #aaa;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+.growth{
+  color: #7df37d;
+   font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.garage{
+  color: #20c0ff;
+   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 /* ---- Social Icons ---- */
