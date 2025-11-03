@@ -10,7 +10,7 @@ export default function Navbar() {
       {/* Left Section */}
       <div className="navbar-left">
       <img src="./src/assets/logo.png" alt="logo" className="gg-logo" />
-        <h3>The <span className="main-logo1"> GROWTH</span> <span className="main-logo2">GARAGE</span></h3>
+        <h3>THE <span className="main-logo1"> GROWTH</span> <span className="main-logo2">GARAGE</span></h3>
       </div>
 
       {/* Hamburger Icon (visible on mobile) */}
