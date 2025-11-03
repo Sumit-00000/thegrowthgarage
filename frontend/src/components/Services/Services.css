@@ -1,0 +1,420 @@
+/* ------Service Container CSS------ */
+.service-header {
+  display: flex;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.our-services {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.span-services {
+  font-weight: 700;
+  color: #7df37d;
+}
+
+.service-paragraph {
+  font-size: 26px;
+  color: rgb(109, 109, 109);
+  font-weight: 300;
+  max-width: 800px;
+}
+
+/* ✅ Tablet view */
+@media (max-width: 1024px) {
+  .our-services {
+    font-size: 2.8rem;
+  }
+
+  .service-paragraph {
+    font-size: 22px;
+  }
+}
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+  .service-header {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .our-services {
+    font-size: 2.2rem;
+  }
+
+  .service-paragraph {
+    font-size: 18px;
+  }
+}
+
+/* ✅ Small mobile view (under 480px) */
+@media (max-width: 480px) {
+  .our-services {
+    font-size: 1.8rem;
+  }
+
+  .service-paragraph {
+    font-size: 16px;
+  }
+}
+
+
+/*  ----------Magic Bento CSS for Laptop and Tablet view-----------   */
+:root {
+  --hue: 27;
+  --sat: 69%;
+  --white: hsl(0, 0%, 100%);
+  --purple-primary: rgba(132, 0, 255, 1);
+  --purple-glow: rgba(132, 0, 255, 0.2);
+  --purple-border: rgba(132, 0, 255, 0.8);
+  --border-color: #392e4e;
+  --background-dark: #060010;
+  color-scheme: light dark;
+}
+
+.card-grid {
+  display: grid;
+  gap: 0.5em;
+  padding: 0.75em;
+  /* max-width: 54em; */
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+}
+
+.magic-bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  aspect-ratio: 4/3;
+  min-height: 200px;
+  width: 100%;
+  max-width: 100%;
+  padding: 1.25em;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--background-dark);
+  font-weight: 300;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 200px;
+}
+
+.magic-bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.magic-bento-card__header,
+.magic-bento-card__content {
+  display: flex;
+  position: relative;
+  color: var(--white);
+}
+
+.magic-bento-card__header {
+  gap: 0.75em;
+  justify-content: space-between;
+}
+
+.magic-bento-card__content {
+  flex-direction: column;
+}
+
+.magic-bento-card__label {
+  font-size: 16px;
+}
+
+.magic-bento-card__title,
+.magic-bento-card__description {
+  --clamp-title: 1;
+  --clamp-desc: 2;
+}
+
+.magic-bento-card__title {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 0.25em;
+}
+
+.magic-bento-card__description {
+  font-size: 12px;
+  line-height: 1.2;
+  opacity: 0.9;
+}
+
+.magic-bento-card--text-autohide .magic-bento-card__title,
+.magic-bento-card--text-autohide .magic-bento-card__description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.magic-bento-card--text-autohide .magic-bento-card__title {
+  -webkit-line-clamp: var(--clamp-title);
+  line-clamp: var(--clamp-title);
+}
+
+.magic-bento-card--text-autohide .magic-bento-card__description {
+  -webkit-line-clamp: var(--clamp-desc);
+  line-clamp: var(--clamp-desc);
+}
+
+@media (max-width: 599px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5em;
+  }
+
+  .magic-bento-card {
+    width: 100%;
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .magic-bento-card:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .magic-bento-card:nth-child(4) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+  }
+
+  .magic-bento-card:nth-child(6) {
+    grid-column: 4;
+    grid-row: 3;
+  }
+}
+
+/* Border glow effect */
+.magic-bento-card--border-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 6px;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.8)) 0%,
+    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.4)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: subtract;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.magic-bento-card--border-glow:hover::after {
+  opacity: 1;
+}
+
+.magic-bento-card--border-glow:hover {
+  box-shadow: 0 4px 20px rgba(46, 24, 78, 0.4), 0 0 30px var(--purple-glow);
+}
+
+.particle-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(132, 0, 255, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.particle-container:hover {
+  box-shadow: 0 4px 20px rgba(46, 24, 78, 0.2), 0 0 30px var(--purple-glow);
+}
+
+/* Global spotlight styles */
+.global-spotlight {
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+  z-index: 200 !important;
+  pointer-events: none;
+}
+
+.bento-section {
+  position: relative;
+  user-select: none;
+}
+
+
+/* 
+@media (max-width: 768px) {
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #555;
+    border-radius: 24px;
+    padding: 16px;
+    --outer-r: 24px;
+    --p-distance: 12px;
+  }
+
+  .carousel-track {
+    display: flex;
+  }
+
+  .carousel-item {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid #555;
+    border-radius: calc(var(--outer-r) - var(--p-distance));
+    background-color: #0d0716;
+    overflow: hidden;
+    cursor: grab;
+  }
+  .carousel-item:hover {
+    background-color: #7df37d;
+  }
+
+  .carousel-item:active {
+    cursor: grabbing;
+  }
+
+  .carousel-container.round {
+    border: 1px solid #555;
+  }
+
+  .carousel-item.round {
+    background-color: #0d0716;
+    position: relative;
+    bottom: 0.1em;
+    border: 1px solid #555;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-item-header.round {
+    padding: 0;
+    margin: 0;
+  }
+
+  .carousel-indicators-container.round {
+    position: absolute;
+    z-index: 2;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .carousel-indicator.active {
+    background-color: #333333;
+  }
+
+  .carousel-indicator.inactive {
+    background-color: rgba(51, 51, 51, 0.4);
+  }
+
+  .carousel-item-header {
+    margin-bottom: 16px;
+    padding: 20px;
+    padding-top: 20px;
+  }
+
+  .carousel-icon-container {
+    display: flex;
+    height: 28px;
+    width: 28px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .carousel-icon {
+    height: 16px;
+    width: 16px;
+    color: #060010;
+  }
+
+  .carousel-item-content {
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+
+  .carousel-item-title {
+    margin-bottom: 4px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .carousel-item-description {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .carousel-indicators-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .carousel-indicators {
+    margin-top: 16px;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+
+  .carousel-indicator {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 150ms;
+  }
+
+  .carousel-indicator.active {
+    background-color: #fff;
+  }
+
+  .carousel-indicator.inactive {
+    background-color: #555;
+  }
+} */
