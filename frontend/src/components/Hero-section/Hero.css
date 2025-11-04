@@ -25,7 +25,7 @@
 .kicker {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #0b6ef6;
+  color: #20c0ff;;
   letter-spacing: 0.08em;
   margin-bottom: 12px;
 }
@@ -39,7 +39,7 @@
 }
 
 .hero-title .accent {
-  color: #0b6ef6;
+  color: #20c0ff;
 }
 
 .hero-sub {
@@ -60,7 +60,7 @@
 }
 
 .btn-primary-hero {
-  background: linear-gradient(90deg, #0b6ef6, #6aa7ff);
+  background: linear-gradient(90deg, #20c0ff, #6aa7ff);
   color: #fff;
   padding: 12px 20px;
   border-radius: 12px;
@@ -75,7 +75,7 @@
 }
 
 .link-light {
-  color: #0b6ef6;
+  color: #20c0ff;;
   text-decoration: none;
   font-weight: 600;
 }

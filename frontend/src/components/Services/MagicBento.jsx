@@ -10,39 +10,39 @@ const MOBILE_BREAKPOINT = 768;
 const cardData = [
   {
     color: '#060010',
-    title: 'Analytics',
+    title: 'Custom web applications built with cutting-edge technology and best practices.',
     description: 'Track user behavior',
-    label: 'Insights'
+    label: 'Full Stack Development'
   },
   {
     color: '#060010',
-    title: 'Dashboard',
+    title: 'Strategic SEO and digital marketing to boost your online visibility and traffic.',
     description: 'Centralized data view',
-    label: 'Overview'
+    label: 'SEO & Marketing'
   },
   {
     color: '#060010',
-    title: 'Collaboration',
+    title: 'Professional video content and branding that tells your story compellingly.',
     description: 'Work together seamlessly',
-    label: 'Teamwork'
+    label: 'Video Editing & Branding'
   },
   {
     color: '#060010',
-    title: 'Automation',
+    title: 'Leverage AI to automate processes and enhance your business efficiency.',
     description: 'Streamline workflows',
-    label: 'Efficiency'
+    label: 'AI Tools & Automation'
   },
   {
     color: '#060010',
-    title: 'Integration',
+    title: 'E-commerce solutions and WordPress sites optimized for conversions.',
     description: 'Connect favorite tools',
-    label: 'Connectivity'
+    label: 'WordPress & Shopify'
   },
   {
     color: '#060010',
-    title: 'Security',
+    title: 'Connect with high-follower creators to amplify your brand reach.',
     description: 'Enterprise-grade protection',
-    label: 'Protection'
+    label: 'Influencer Promotions'
   }
 ];
 
